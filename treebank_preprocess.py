@@ -51,9 +51,6 @@ df_prose = create_df("prose")
 df_poetry = create_df("poetry")
 
 df = pd.concat([df_prose, df_poetry], ignore_index=True)
-print(df)
-df.to_pickle('./corpus.pickle')
-
 new_df = df[["label", "text"]]
 
 new_df.to_pickle('./bert_corpus.pickle')
